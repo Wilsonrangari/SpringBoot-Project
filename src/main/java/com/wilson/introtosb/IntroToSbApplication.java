@@ -11,6 +11,10 @@ public class IntroToSbApplication implements CommandLineRunner {
     @Autowired
     Apple obj;
 
+    @Autowired
+    DB db;
+
+
     public static void main(String[] args) {
 
         SpringApplication.run(IntroToSbApplication.class, args);
@@ -20,6 +24,8 @@ public class IntroToSbApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        obj.eatApple();
+        //obj.eatApple();
+        db.getData();
+
     }
 }
